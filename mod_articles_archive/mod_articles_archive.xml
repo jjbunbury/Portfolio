@@ -2,7 +2,7 @@
 <extension type="module" version="1.0" client="site"
 	method="upgrade"
 >
-	<name>mod_articles_archive</name>
+	<name>mod_portfolio_archive</name>
 	<author>Joomla! Project</author>
 	<creationDate>July 2006</creationDate>
 	<copyright>Copyright (C) 2005 - 2013 Open Source Matters.
@@ -14,15 +14,15 @@
 	<version>1.0.0</version>
 	<description>MOD_ARTICLES_ARCHIVE_XML_DESCRIPTION</description>
 	<files>
-		<filename module="mod_articles_archive">mod_articles_archive.php</filename>
+		<filename module="mod_portfolio_archive">mod_portfolio_archive.php</filename>
 		<folder>tmpl</folder>
 		<filename>helper.php</filename>
 		<filename>index.html</filename>
-		<filename>mod_articles_archive.xml</filename>
+		<filename>mod_portfolio_archive.xml</filename>
 	</files>
 	<languages>
-		<language tag="en-GB">en-GB.mod_articles_archive.ini</language>
-		<language tag="en-GB">en-GB.mod_articles_archive.sys.ini</language>
+		<language tag="en-GB">en-GB.mod_portfolio_archive.ini</language>
+		<language tag="en-GB">en-GB.mod_portfolio_archive.sys.ini</language>
 	</languages>
 	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_ARTICLES_ARCHIVE" />
 	<config>

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Site
- * @subpackage	mod_articles_archive
+ * @subpackage	mod_portfolio_archive
  * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -16,4 +16,4 @@ $params->def('count', 10);
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 $list = modArchiveHelper::getList($params);
 
-require JModuleHelper::getLayoutPath('mod_articles_archive', $params->get('layout', 'default'));
+require JModuleHelper::getLayoutPath('mod_portfolio_archive', $params->get('layout', 'default'));

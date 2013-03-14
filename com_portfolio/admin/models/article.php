@@ -535,7 +535,7 @@ class ContentModelArticle extends JModelAdmin
 	protected function cleanCache($group = null, $client_id = 0)
 	{
 		parent::cleanCache('com_portfolio');
-		parent::cleanCache('mod_articles_archive');
+		parent::cleanCache('mod_portfolio_archive');
 		parent::cleanCache('mod_articles_categories');
 		parent::cleanCache('mod_articles_category');
 		parent::cleanCache('mod_articles_latest');

@@ -31,3 +31,5 @@ $ -> Language fix or change
 ^ Renamed com_content as com_portfolio
 ^ copyright change to source code copyrights
 ^ version bump @since files
+^ mod_articles_archive renamed as mod_portfolio_archive
++ added missing language ini files
