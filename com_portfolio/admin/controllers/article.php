@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     Joomla.Administrator
- * @subpackage  com_content
+ * @subpackage  com_portfolio
  *
  * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
@@ -14,7 +14,7 @@ jimport('joomla.application.component.controllerform');
 
 /**
  * @package     Joomla.Administrator
- * @subpackage  com_content
+ * @subpackage  com_portfolio
  * @since       1.6
  */
 class ContentControllerArticle extends JControllerForm
@@ -58,7 +58,7 @@ class ContentControllerArticle extends JControllerForm
 		if ($categoryId)
 		{
 			// If the category has been passed in the data or URL check it.
-			$allow = $user->authorise('core.create', 'com_content.category.' . $categoryId);
+			$allow = $user->authorise('core.create', 'com_portfolio.category.' . $categoryId);
 		}
 
 		if ($allow === null)
@@ -90,14 +90,14 @@ class ContentControllerArticle extends JControllerForm
 		$userId = $user->get('id');
 
 		// Check general edit permission first.
-		if ($user->authorise('core.edit', 'com_content.article.' . $recordId))
+		if ($user->authorise('core.edit', 'com_portfolio.article.' . $recordId))
 		{
 			return true;
 		}
 
 		// Fallback on edit.own.
 		// First test if the permission is available.
-		if ($user->authorise('core.edit.own', 'com_content.article.' . $recordId))
+		if ($user->authorise('core.edit.own', 'com_portfolio.article.' . $recordId))
 		{
 			// Now test the owner is the user.
 			$ownerId = (int) isset($data['created_by']) ? $data['created_by'] : 0;
@@ -142,7 +142,7 @@ class ContentControllerArticle extends JControllerForm
 		$model = $this->getModel('Article', '', array());
 
 		// Preset the redirect
-		$this->setRedirect(JRoute::_('index.php?option=com_content&view=articles' . $this->getRedirectToListAppend(), false));
+		$this->setRedirect(JRoute::_('index.php?option=com_portfolio&view=articles' . $this->getRedirectToListAppend(), false));
 
 		return parent::batch($model);
 	}

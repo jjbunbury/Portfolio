@@ -8,9 +8,9 @@
 
 defined('_JEXEC') or die;
 
-require_once JPATH_SITE.'/components/com_content/helpers/route.php';
+require_once JPATH_SITE.'/components/com_portfolio/helpers/route.php';
 
-JModelLegacy::addIncludePath(JPATH_SITE.'/components/com_content/models', 'ContentModel');
+JModelLegacy::addIncludePath(JPATH_SITE.'/components/com_portfolio/models', 'ContentModel');
 
 abstract class modArticlesNewsHelper
 {
@@ -37,7 +37,7 @@ abstract class modArticlesNewsHelper
 			' a.hits, a.featured' );
 
 		// Access filter
-		$access = !JComponentHelper::getParams('com_content')->get('show_noauth');
+		$access = !JComponentHelper::getParams('com_portfolio')->get('show_noauth');
 		$authorised = JAccess::getAuthorisedViewLevels(JFactory::getUser()->get('id'));
 		$model->setState('filter.access', $access);
 
@@ -82,10 +82,10 @@ abstract class modArticlesNewsHelper
 				$item->introtext = preg_replace('/<img[^>]*>/', '', $item->introtext);
 			}
 
-			$results = $app->triggerEvent('onContentAfterDisplay', array('com_content.article', &$item, &$params, 1));
+			$results = $app->triggerEvent('onContentAfterDisplay', array('com_portfolio.article', &$item, &$params, 1));
 			$item->afterDisplayTitle = trim(implode("\n", $results));
 
-			$results = $app->triggerEvent('onContentBeforeDisplay', array('com_content.article', &$item, &$params, 1));
+			$results = $app->triggerEvent('onContentBeforeDisplay', array('com_portfolio.article', &$item, &$params, 1));
 			$item->beforeDisplayContent = trim(implode("\n", $results));
 		}
 

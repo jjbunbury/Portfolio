@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
  * Renders an author element
  *
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @deprecated	JParameter is deprecated and will be removed in a future version. Use JForm instead.
  * @since		1.5
  */
@@ -30,7 +30,7 @@ class JElementAuthor extends JElement
 		$access	= JFactory::getACL();
 
 		// Include user in groups that have access to edit their articles, other articles, or manage content.
-		$action = array('com_content.article.edit_own', 'com_content.article.edit_article', 'com_content.manage');
+		$action = array('com_portfolio.article.edit_own', 'com_portfolio.article.edit_article', 'com_portfolio.manage');
 		$groups	= $access->getAuthorisedUsergroups($action, true);
 
 		// Check the results of the access check.

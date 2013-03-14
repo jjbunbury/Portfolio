@@ -10,7 +10,7 @@
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
 			description="JGLOBAL_FIELD_LAYOUT_DESC"
 			menuitems="true"
-			extension="com_content"
+			extension="com_portfolio"
 			view="article"
 		/>
 
@@ -424,7 +424,7 @@
 			label="JGLOBAL_FIELD_LAYOUT_LABEL"
 			description="JGLOBAL_FIELD_LAYOUT_DESC"
 			menuitems="true"
-			extension="com_content"
+			extension="com_portfolio"
 			view="category"
 		/>
 
@@ -832,7 +832,7 @@
 			class="inputbox"
 			validate="rules"
 			filter="rules"
-			component="com_content"
+			component="com_portfolio"
 			section="component" />
 	</fieldset>
 </config>

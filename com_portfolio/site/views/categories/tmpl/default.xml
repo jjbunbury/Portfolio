@@ -15,7 +15,7 @@
 		 >
 			<field name="id" type="category"
 				description="JGLOBAL_FIELD_CATEGORIES_CHOOSE_CATEGORY_DESC"
-				extension="com_content"
+				extension="com_portfolio"
 				label="JGLOBAL_FIELD_CATEGORIES_CHOOSE_CATEGORY_LABEL"
 				show_root="true"
 				required="true"

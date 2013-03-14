@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
  * Renders an article element
  *
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @deprecated	JParameter is deprecated and will be removed in a future version. Use JForm instead.
  * @since		1.5
  */
@@ -47,7 +47,7 @@ class JElementArticle extends JElement
 		}";
 		$doc->addScriptDeclaration($js);
 
-		$link = 'index.php?option=com_content&amp;task=element&amp;tmpl=component&amp;function=jSelectArticle_'.$name;
+		$link = 'index.php?option=com_portfolio&amp;task=element&amp;tmpl=component&amp;function=jSelectArticle_'.$name;
 
 		JHtml::_('behavior.modal', 'a.modal');
 		$html = "\n".'<div class="fltlft"><input type="text" id="'.$name.'_name" value="'.htmlspecialchars($article->title, ENT_QUOTES, 'UTF-8').'" disabled="disabled" /></div>';

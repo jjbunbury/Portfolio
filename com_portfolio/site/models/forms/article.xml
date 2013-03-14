@@ -43,7 +43,7 @@
 			description="CONTENT_TEXT_DESC"
 			class="inputbox"
 			filter="ContentHelper::filterText"
-			asset_id="com_content"
+			asset_id="com_portfolio"
 		/>
 
 		<field
@@ -86,7 +86,7 @@
 			id="catid"
 			name="catid"
 			type="categoryedit"
-			extension="com_content"
+			extension="com_portfolio"
 			label="JCATEGORY"
 			description="JFIELD_CATEGORY_DESC"
 			class="inputbox"

@@ -15,7 +15,7 @@ jimport('joomla.application.component.helper');
 require_once JPATH_ADMINISTRATOR . '/components/com_finder/helpers/indexer/adapter.php';
 
 /**
- * Finder adapter for com_content.
+ * Finder adapter for com_portfolio.
  *
  * @package     Joomla.Plugin
  * @subpackage  Finder.Content
@@ -37,7 +37,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 * @var    string
 	 * @since  2.5
 	 */
-	protected $extension = 'com_content';
+	protected $extension = 'com_portfolio';
 
 	/**
 	 * The sublayout to use when rendering the results.
@@ -92,8 +92,8 @@ class plgFinderContent extends FinderIndexerAdapter
 	 */
 	public function onFinderCategoryChangeState($extension, $pks, $value)
 	{
-		// Make sure we're handling com_content categories
-		if ($extension == 'com_content')
+		// Make sure we're handling com_portfolio categories
+		if ($extension == 'com_portfolio')
 		{
 			$this->categoryStateChange($pks, $value);
 		}
@@ -112,7 +112,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 */
 	public function onFinderAfterDelete($context, $table)
 	{
-		if ($context == 'com_content.article')
+		if ($context == 'com_portfolio.article')
 		{
 			$id = $table->id;
 		}
@@ -143,7 +143,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	public function onFinderAfterSave($context, $row, $isNew)
 	{
 		// We only want to handle articles here
-		if ($context == 'com_content.article' || $context == 'com_content.form')
+		if ($context == 'com_portfolio.article' || $context == 'com_portfolio.form')
 		{
 			// Check if the access levels are different
 			if (!$isNew && $this->old_access != $row->access)
@@ -186,7 +186,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	public function onFinderBeforeSave($context, $row, $isNew)
 	{
 		// We only want to handle articles here
-		if ($context == 'com_content.article' || $context == 'com_content.form')
+		if ($context == 'com_portfolio.article' || $context == 'com_portfolio.form')
 		{
 			// Query the database for the old access level if the item isn't new
 			if (!$isNew)
@@ -224,7 +224,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	public function onFinderChangeState($context, $pks, $value)
 	{
 		// We only want to handle articles here
-		if ($context == 'com_content.article' || $context == 'com_content.form')
+		if ($context == 'com_portfolio.article' || $context == 'com_portfolio.form')
 		{
 			$this->itemStateChange($pks, $value);
 		}
@@ -257,7 +257,7 @@ class plgFinderContent extends FinderIndexerAdapter
 		// Initialize the item parameters.
 		$registry = new JRegistry;
 		$registry->loadString($item->params);
-		$item->params = JComponentHelper::getParams('com_content', true);
+		$item->params = JComponentHelper::getParams('com_portfolio', true);
 		$item->params->merge($registry);
 
 		$registry = new JRegistry;
@@ -327,7 +327,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	protected function setup()
 	{
 		// Load dependent classes.
-		include_once JPATH_SITE . '/components/com_content/helpers/route.php';
+		include_once JPATH_SITE . '/components/com_portfolio/helpers/route.php';
 
 		return true;
 	}

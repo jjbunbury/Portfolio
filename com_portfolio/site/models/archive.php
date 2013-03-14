@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -15,7 +15,7 @@ require_once dirname(__FILE__) . '/articles.php';
  * Content Component Archive Model
  *
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.5
  */
 class ContentModelArchive extends ContentModelArticles
@@ -25,7 +25,7 @@ class ContentModelArchive extends ContentModelArticles
 	 *
 	 * @var		string
 	 */
-	public $_context = 'com_content.archive';
+	public $_context = 'com_portfolio.archive';
 
 	/**
 	 * Method to auto-populate the model state.
@@ -54,7 +54,7 @@ class ContentModelArchive extends ContentModelArticles
 		// Get list limit
 		$app = JFactory::getApplication();
 		$itemid = JRequest::getInt('Itemid', 0);
-		$limit = $app->getUserStateFromRequest('com_content.archive.list' . $itemid . '.limit', 'limit', $params->get('display_num'), 'uint');
+		$limit = $app->getUserStateFromRequest('com_portfolio.archive.list' . $itemid . '.limit', 'limit', $params->get('display_num'), 'uint');
 		$this->setState('list.limit', $limit);
 	}
 

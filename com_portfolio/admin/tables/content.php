@@ -45,7 +45,7 @@ class JTableContent extends JTable
 	protected function _getAssetName()
 	{
 		$k = $this->_tbl_key;
-		return 'com_content.article.' . (int) $this->$k;
+		return 'com_portfolio.article.' . (int) $this->$k;
 	}
 
 	/**

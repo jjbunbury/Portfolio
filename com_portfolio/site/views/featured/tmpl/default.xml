@@ -15,7 +15,7 @@
 			<field
 			name="featured_categories"
 			type="category"
-			extension="com_content"
+			extension="com_portfolio"
 			multiple="true"
 			size="10"
 			default=""

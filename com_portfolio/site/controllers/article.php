@@ -11,7 +11,7 @@ jimport('joomla.application.component.controllerform');
 
 /**
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  */
 class ContentControllerArticle extends JControllerForm
 {
@@ -56,7 +56,7 @@ class ContentControllerArticle extends JControllerForm
 
 		if ($categoryId) {
 			// If the category has been passed in the data or URL check it.
-			$allow	= $user->authorise('core.create', 'com_content.category.'.$categoryId);
+			$allow	= $user->authorise('core.create', 'com_portfolio.category.'.$categoryId);
 		}
 
 		if ($allow === null) {
@@ -83,7 +83,7 @@ class ContentControllerArticle extends JControllerForm
 		$recordId	= (int) isset($data[$key]) ? $data[$key] : 0;
 		$user		= JFactory::getUser();
 		$userId		= $user->get('id');
-		$asset		= 'com_content.article.'.$recordId;
+		$asset		= 'com_portfolio.article.'.$recordId;
 
 		// Check general edit permission first.
 		if ($user->authorise('core.edit', $asset)) {
@@ -250,7 +250,7 @@ class ContentControllerArticle extends JControllerForm
 		$task = $this->getTask();
 
 		if ($task == 'save') {
-			$this->setRedirect(JRoute::_('index.php?option=com_content&view=category&id='.$validData['catid'], false));
+			$this->setRedirect(JRoute::_('index.php?option=com_portfolio&view=category&id='.$validData['catid'], false));
 		}
 	}
 
@@ -266,7 +266,7 @@ class ContentControllerArticle extends JControllerForm
 	public function save($key = null, $urlVar = 'a_id')
 	{
 		// Load the backend helper for filtering.
-		require_once JPATH_ADMINISTRATOR.'/components/com_content/helpers/content.php';
+		require_once JPATH_ADMINISTRATOR.'/components/com_portfolio/helpers/content.php';
 
 		$result = parent::save($key, $urlVar);
 

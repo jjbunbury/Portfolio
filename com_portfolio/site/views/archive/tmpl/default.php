@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -32,7 +32,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 		<button type="submit" class="button"><?php echo JText::_('JGLOBAL_FILTER_BUTTON'); ?></button>
 	</div>
 	<input type="hidden" name="view" value="archive" />
-	<input type="hidden" name="option" value="com_content" />
+	<input type="hidden" name="option" value="com_portfolio" />
 	<input type="hidden" name="limitstart" value="0" />
 	</fieldset>
 

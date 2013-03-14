@@ -7,7 +7,7 @@
 // no direct access
 defined('_JEXEC') or die;
 
-require_once JPATH_SITE.'/components/com_content/router.php';
+require_once JPATH_SITE.'/components/com_portfolio/router.php';
 
 /**
  * Content Search plugin
@@ -46,7 +46,7 @@ class plgSearchContent extends JPlugin
 		$groups	= implode(',', $user->getAuthorisedViewLevels());
 		$tag = JFactory::getLanguage()->getTag();
 
-		require_once JPATH_SITE . '/components/com_content/helpers/route.php';
+		require_once JPATH_SITE . '/components/com_portfolio/helpers/route.php';
 		require_once JPATH_ADMINISTRATOR . '/components/com_search/helpers/search.php';
 
 		$searchText = $text;
@@ -230,7 +230,7 @@ class plgSearchContent extends JPlugin
 			$list3 = $db->loadObjectList();
 
 			// find an itemid for archived to use if there isn't another one
-			$item	= $app->getMenu()->getItems('link', 'index.php?option=com_content&view=archive', true);
+			$item	= $app->getMenu()->getItems('link', 'index.php?option=com_portfolio&view=archive', true);
 			$itemid = isset($item->id) ? '&Itemid='.$item->id : '';
 
 			if (isset($list3))
@@ -242,7 +242,7 @@ class plgSearchContent extends JPlugin
 					$created_month	= $date->format("n");
 					$created_year	= $date->format("Y");
 
-					$list3[$key]->href	= JRoute::_('index.php?option=com_content&view=archive&year='.$created_year.'&month='.$created_month.$itemid);
+					$list3[$key]->href	= JRoute::_('index.php?option=com_portfolio&view=archive&year='.$created_year.'&month='.$created_month.$itemid);
 				}
 			}
 

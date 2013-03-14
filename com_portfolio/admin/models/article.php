@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -18,7 +18,7 @@ require_once JPATH_COMPONENT_ADMINISTRATOR.'/helpers/content.php';
  * Item Model for an Article.
  *
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.6
  */
 class ContentModelArticle extends JModelAdmin
@@ -178,7 +178,7 @@ class ContentModelArticle extends JModelAdmin
 				return ;
 			}
 			$user = JFactory::getUser();
-			return $user->authorise('core.delete', 'com_content.article.'.(int) $record->id);
+			return $user->authorise('core.delete', 'com_portfolio.article.'.(int) $record->id);
 		}
 	}
 
@@ -196,15 +196,15 @@ class ContentModelArticle extends JModelAdmin
 
 		// Check for existing article.
 		if (!empty($record->id)) {
-			return $user->authorise('core.edit.state', 'com_content.article.'.(int) $record->id);
+			return $user->authorise('core.edit.state', 'com_portfolio.article.'.(int) $record->id);
 		}
 		// New article, so check against the category.
 		elseif (!empty($record->catid)) {
-			return $user->authorise('core.edit.state', 'com_content.category.'.(int) $record->catid);
+			return $user->authorise('core.edit.state', 'com_portfolio.category.'.(int) $record->catid);
 		}
 		// Default to component settings if neither article nor category known.
 		else {
-			return parent::canEditState('com_content');
+			return parent::canEditState('com_portfolio');
 		}
 	}
 
@@ -297,7 +297,7 @@ class ContentModelArticle extends JModelAdmin
 	public function getForm($data = array(), $loadData = true)
 	{
 		// Get the form.
-		$form = $this->loadForm('com_content.article', 'article', array('control' => 'jform', 'load_data' => $loadData));
+		$form = $this->loadForm('com_portfolio.article', 'article', array('control' => 'jform', 'load_data' => $loadData));
 		if (empty($form)) {
 			return false;
 		}
@@ -332,8 +332,8 @@ class ContentModelArticle extends JModelAdmin
 
 		// Check for existing article.
 		// Modify the form based on Edit State access controls.
-		if ($id != 0 && (!$user->authorise('core.edit.state', 'com_content.article.'.(int) $id))
-		|| ($id == 0 && !$user->authorise('core.edit.state', 'com_content'))
+		if ($id != 0 && (!$user->authorise('core.edit.state', 'com_portfolio.article.'.(int) $id))
+		|| ($id == 0 && !$user->authorise('core.edit.state', 'com_portfolio'))
 		)
 		{
 			// Disable fields for display.
@@ -365,7 +365,7 @@ class ContentModelArticle extends JModelAdmin
 	protected function loadFormData()
 	{
 		// Check the session for previously entered form data.
-		$data = JFactory::getApplication()->getUserState('com_content.edit.article.data', array());
+		$data = JFactory::getApplication()->getUserState('com_portfolio.edit.article.data', array());
 
 		if (empty($data)) {
 			$data = $this->getItem();
@@ -373,7 +373,7 @@ class ContentModelArticle extends JModelAdmin
 			// Prime some default values.
 			if ($this->getState('article.id') == 0) {
 				$app = JFactory::getApplication();
-				$data->set('catid', JRequest::getInt('catid', $app->getUserState('com_content.articles.filter.category_id')));
+				$data->set('catid', JRequest::getInt('catid', $app->getUserState('com_portfolio.articles.filter.category_id')));
 			}
 		}
 
@@ -528,13 +528,13 @@ class ContentModelArticle extends JModelAdmin
 	}
 
 	/**
-	 * Custom clean the cache of com_content and content modules
+	 * Custom clean the cache of com_portfolio and content modules
 	 *
 	 * @since	1.6
 	 */
 	protected function cleanCache($group = null, $client_id = 0)
 	{
-		parent::cleanCache('com_content');
+		parent::cleanCache('com_portfolio');
 		parent::cleanCache('mod_articles_archive');
 		parent::cleanCache('mod_articles_categories');
 		parent::cleanCache('mod_articles_category');

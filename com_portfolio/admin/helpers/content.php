@@ -11,12 +11,12 @@ defined('_JEXEC') or die;
  * Content component helper.
  *
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.6
  */
 class ContentHelper
 {
-	public static $extension = 'com_content';
+	public static $extension = 'com_portfolio';
 
 	/**
 	 * Configure the Linkbar.
@@ -30,16 +30,16 @@ class ContentHelper
 	{
 		JSubMenuHelper::addEntry(
 			JText::_('JGLOBAL_ARTICLES'),
-			'index.php?option=com_content&view=articles',
+			'index.php?option=com_portfolio&view=articles',
 			$vName == 'articles'
 		);
 		JSubMenuHelper::addEntry(
 			JText::_('COM_CONTENT_SUBMENU_CATEGORIES'),
-			'index.php?option=com_categories&extension=com_content',
+			'index.php?option=com_categories&extension=com_portfolio',
 			$vName == 'categories');
 		JSubMenuHelper::addEntry(
 			JText::_('COM_CONTENT_SUBMENU_FEATURED'),
-			'index.php?option=com_content&view=featured',
+			'index.php?option=com_portfolio&view=featured',
 			$vName == 'featured'
 		);
 	}
@@ -60,13 +60,13 @@ class ContentHelper
 		$result	= new JObject;
 
 		if (empty($articleId) && empty($categoryId)) {
-			$assetName = 'com_content';
+			$assetName = 'com_portfolio';
 		}
 		elseif (empty($articleId)) {
-			$assetName = 'com_content.category.'.(int) $categoryId;
+			$assetName = 'com_portfolio.category.'.(int) $categoryId;
 		}
 		else {
-			$assetName = 'com_content.article.'.(int) $articleId;
+			$assetName = 'com_portfolio.article.'.(int) $articleId;
 		}
 
 		$actions = array(

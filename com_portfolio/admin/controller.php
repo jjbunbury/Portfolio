@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
  * Component Controller
  *
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  */
 class ContentController extends JControllerLegacy
 {
@@ -39,11 +39,11 @@ class ContentController extends JControllerLegacy
 		$id			= JRequest::getInt('id');
 
 		// Check for edit form.
-		if ($view == 'article' && $layout == 'edit' && !$this->checkEditId('com_content.edit.article', $id)) {
+		if ($view == 'article' && $layout == 'edit' && !$this->checkEditId('com_portfolio.edit.article', $id)) {
 			// Somehow the person just went to the form - we don't allow that.
 			$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 			$this->setMessage($this->getError(), 'error');
-			$this->setRedirect(JRoute::_('index.php?option=com_content&view=articles', false));
+			$this->setRedirect(JRoute::_('index.php?option=com_portfolio&view=articles', false));
 
 			return false;
 		}

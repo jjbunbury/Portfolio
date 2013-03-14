@@ -27,3 +27,5 @@ $ -> Language fix or change
 ! -> Note
 
 -------------------- 1.0.0 Alpha Release [13-March-2013] ------------------
++ missing CHANGELOG Credits files for com_portfolio
+^ Renamed com_content as com_portfolio

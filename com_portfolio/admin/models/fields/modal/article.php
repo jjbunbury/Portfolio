@@ -10,7 +10,7 @@ defined('JPATH_BASE') or die;
  * Supports a modal article picker.
  *
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.6
  */
 class JFormFieldModal_Article extends JFormField
@@ -48,7 +48,7 @@ class JFormFieldModal_Article extends JFormField
 
 		// Setup variables for display.
 		$html	= array();
-		$link	= 'index.php?option=com_content&amp;view=articles&amp;layout=modal&amp;tmpl=component&amp;function=jSelectArticle_'.$this->id;
+		$link	= 'index.php?option=com_portfolio&amp;view=articles&amp;layout=modal&amp;tmpl=component&amp;function=jSelectArticle_'.$this->id;
 
 		$db	= JFactory::getDBO();
 		$db->setQuery(

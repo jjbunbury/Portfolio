@@ -6,7 +6,7 @@
 
 defined('_JEXEC') or die;
 
-JModelLegacy::addIncludePath(JPATH_ADMINISTRATOR.'/components/com_content/models', 'ContentModel');
+JModelLegacy::addIncludePath(JPATH_ADMINISTRATOR.'/components/com_portfolio/models', 'ContentModel');
 
 jimport('joomla.application.categories');
 
@@ -72,8 +72,8 @@ abstract class modPopularHelper
 
 		// Set the links
 		foreach ($items as &$item) {
-			if ($user->authorise('core.edit', 'com_content.article.'.$item->id)){
-				$item->link = JRoute::_('index.php?option=com_content&task=article.edit&id='.$item->id);
+			if ($user->authorise('core.edit', 'com_portfolio.article.'.$item->id)){
+				$item->link = JRoute::_('index.php?option=com_portfolio&task=article.edit&id='.$item->id);
 			} else {
 				$item->link = '';
 			}

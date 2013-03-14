@@ -10,7 +10,7 @@ require_once dirname(__FILE__).'/articles.php';
 
 /**
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  */
 class ContentControllerFeatured extends ContentControllerArticles
 {
@@ -29,7 +29,7 @@ class ContentControllerFeatured extends ContentControllerArticles
 		// Access checks.
 		foreach ($ids as $i => $id)
 		{
-			if (!$user->authorise('core.delete', 'com_content.article.'.(int) $id))
+			if (!$user->authorise('core.delete', 'com_portfolio.article.'.(int) $id))
 			{
 				// Prune items that you can't delete.
 				unset($ids[$i]);
@@ -50,7 +50,7 @@ class ContentControllerFeatured extends ContentControllerArticles
 			}
 		}
 
-		$this->setRedirect('index.php?option=com_content&view=featured');
+		$this->setRedirect('index.php?option=com_portfolio&view=featured');
 	}
 
 	/**
@@ -63,7 +63,7 @@ class ContentControllerFeatured extends ContentControllerArticles
 	{
 		parent::publish();
 
-		$this->setRedirect('index.php?option=com_content&view=featured');
+		$this->setRedirect('index.php?option=com_portfolio&view=featured');
 	}
 
 	/**

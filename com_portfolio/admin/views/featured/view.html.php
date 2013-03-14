@@ -8,7 +8,7 @@ defined('_JEXEC') or die;
 
 /**
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  */
 class ContentViewFeatured extends JViewLegacy
 {
@@ -73,7 +73,7 @@ class ContentViewFeatured extends JViewLegacy
 		}
 
 		if ($canDo->get('core.admin')) {
-			JToolBarHelper::preferences('com_content');
+			JToolBarHelper::preferences('com_portfolio');
 			JToolBarHelper::divider();
 		}
 		JToolBarHelper::help('JHELP_CONTENT_FEATURED_ARTICLES');

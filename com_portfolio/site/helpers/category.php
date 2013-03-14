@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -16,7 +16,7 @@ jimport('joomla.application.categories');
  *
  * @static
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since 1.6
  */
 class ContentCategories extends JCategories
@@ -24,7 +24,7 @@ class ContentCategories extends JCategories
 	public function __construct($options = array())
 	{
 		$options['table'] = '#__content';
-		$options['extension'] = 'com_content';
+		$options['extension'] = 'com_portfolio';
 		parent::__construct($options);
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -10,13 +10,13 @@
 defined('_JEXEC') or die;
 
 // Base this model on the backend version.
-require_once JPATH_ADMINISTRATOR.'/components/com_content/models/article.php';
+require_once JPATH_ADMINISTRATOR.'/components/com_portfolio/models/article.php';
 
 /**
  * Content Component Article Model
  *
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since 1.5
  */
 class ContentModelForm extends ContentModelArticle
@@ -82,7 +82,7 @@ class ContentModelForm extends ContentModelArticle
 		// Compute selected asset permissions.
 		$user	= JFactory::getUser();
 		$userId	= $user->get('id');
-		$asset	= 'com_content.article.'.$value->id;
+		$asset	= 'com_portfolio.article.'.$value->id;
 
 		// Check general edit permission first.
 		if ($user->authorise('core.edit', $asset)) {
@@ -106,11 +106,11 @@ class ContentModelForm extends ContentModelArticle
 			$catId = (int) $this->getState('article.catid');
 
 			if ($catId) {
-				$value->params->set('access-change', $user->authorise('core.edit.state', 'com_content.category.'.$catId));
+				$value->params->set('access-change', $user->authorise('core.edit.state', 'com_portfolio.category.'.$catId));
 				$value->catid = $catId;
 			}
 			else {
-				$value->params->set('access-change', $user->authorise('core.edit.state', 'com_content'));
+				$value->params->set('access-change', $user->authorise('core.edit.state', 'com_portfolio'));
 			}
 		}
 

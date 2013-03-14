@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
  * HTML Article View class for the Content component
  *
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.5
  */
 class ContentViewForm extends JViewLegacy
@@ -33,7 +33,7 @@ class ContentViewForm extends JViewLegacy
 		$this->return_page	= $this->get('ReturnPage');
 
 		if (empty($this->item->id)) {
-			$authorised = $user->authorise('core.create', 'com_content') || (count($user->getAuthorisedCategories('com_content', 'core.create')));
+			$authorised = $user->authorise('core.create', 'com_portfolio') || (count($user->getAuthorisedCategories('com_portfolio', 'core.create')));
 		}
 		else {
 			$authorised = $this->item->params->get('access-edit');

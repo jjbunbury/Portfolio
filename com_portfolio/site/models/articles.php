@@ -12,7 +12,7 @@ jimport('joomla.application.component.modellist');
  * This models supports retrieving lists of articles.
  *
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.6
  */
 class ContentModelArticles extends JModelList
@@ -88,7 +88,7 @@ class ContentModelArticles extends JModelList
 		$this->setState('params', $params);
 		$user		= JFactory::getUser();
 
-		if ((!$user->authorise('core.edit.state', 'com_content')) &&  (!$user->authorise('core.edit', 'com_content'))){
+		if ((!$user->authorise('core.edit.state', 'com_portfolio')) &&  (!$user->authorise('core.edit', 'com_portfolio'))){
 			// filter on published for those who do not have edit or edit.state rights.
 			$this->setState('filter.published', 1);
 		}
@@ -186,7 +186,7 @@ class ContentModelArticles extends JModelList
 		$query->from('#__content AS a');
 
 		// Join over the frontpage articles.
-		if ($this->context != 'com_content.featured') {
+		if ($this->context != 'com_portfolio.featured') {
 			$query->join('LEFT', '#__content_frontpage AS fp ON fp.content_id = a.id');
 		}
 
@@ -222,7 +222,7 @@ class ContentModelArticles extends JModelList
 		$query->select('c.published, CASE WHEN badcats.id is null THEN c.published ELSE 0 END AS parents_published');
 		$subquery = 'SELECT cat.id as id FROM #__categories AS cat JOIN #__categories AS parent ';
 		$subquery .= 'ON cat.lft BETWEEN parent.lft AND parent.rgt ';
-		$subquery .= 'WHERE parent.extension = ' . $db->quote('com_content');
+		$subquery .= 'WHERE parent.extension = ' . $db->quote('com_portfolio');
 
 		if ($this->getState('filter.published') == 2) {
 			// Find any up-path categories that are archived
@@ -480,7 +480,7 @@ class ContentModelArticles extends JModelList
 		$groups	= $user->getAuthorisedViewLevels();
 
 		// Get the global params
-		$globalParams = JComponentHelper::getParams('com_content', true);
+		$globalParams = JComponentHelper::getParams('com_portfolio', true);
 
 		// Convert the parameter fields into objects.
 		foreach ($items as &$item)
@@ -550,7 +550,7 @@ class ContentModelArticles extends JModelList
 			// Compute the asset access permissions.
 			// Technically guest could edit an article, but lets not check that to improve performance a little.
 			if (!$guest) {
-				$asset	= 'com_content.article.'.$item->id;
+				$asset	= 'com_portfolio.article.'.$item->id;
 
 				// Check general edit permission first.
 				if ($user->authorise('core.edit', $asset)) {

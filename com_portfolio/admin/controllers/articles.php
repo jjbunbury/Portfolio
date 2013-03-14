@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -15,7 +15,7 @@ jimport('joomla.application.component.controlleradmin');
  * Articles list controller class.
  *
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since	1.6
  */
 class ContentControllerArticles extends JControllerAdmin
@@ -62,7 +62,7 @@ class ContentControllerArticles extends JControllerAdmin
 		// Access checks.
 		foreach ($ids as $i => $id)
 		{
-			if (!$user->authorise('core.edit.state', 'com_content.article.'.(int) $id)) {
+			if (!$user->authorise('core.edit.state', 'com_portfolio.article.'.(int) $id)) {
 				// Prune items that you can't change.
 				unset($ids[$i]);
 				JError::raiseNotice(403, JText::_('JLIB_APPLICATION_ERROR_EDITSTATE_NOT_PERMITTED'));
@@ -82,7 +82,7 @@ class ContentControllerArticles extends JControllerAdmin
 			}
 		}
 
-		$this->setRedirect('index.php?option=com_content&view=articles');
+		$this->setRedirect('index.php?option=com_portfolio&view=articles');
 	}
 
 	/**

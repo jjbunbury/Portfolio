@@ -12,7 +12,7 @@ jimport('joomla.application.component.modellist');
  * This models supports retrieving lists of article categories.
  *
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.6
  */
 class ContentModelCategories extends JModelList
@@ -22,14 +22,14 @@ class ContentModelCategories extends JModelList
 	 *
 	 * @var		string
 	 */
-	public $_context = 'com_content.categories';
+	public $_context = 'com_portfolio.categories';
 
 	/**
 	 * The category context (allows other extensions to derived from this model).
 	 *
 	 * @var		string
 	 */
-	protected $_extension = 'com_content';
+	protected $_extension = 'com_portfolio';
 
 	private $_parent = null;
 

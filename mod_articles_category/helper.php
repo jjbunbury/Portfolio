@@ -8,7 +8,7 @@
 
 defined('_JEXEC') or die;
 
-$com_path = JPATH_SITE.'/components/com_content/';
+$com_path = JPATH_SITE.'/components/com_portfolio/';
 require_once $com_path.'router.php';
 require_once $com_path.'helpers/route.php';
 
@@ -32,7 +32,7 @@ abstract class modArticlesCategoryHelper
 		$articles->setState('filter.published', 1);
 
 		// Access filter
-		$access = !JComponentHelper::getParams('com_content')->get('show_noauth');
+		$access = !JComponentHelper::getParams('com_portfolio')->get('show_noauth');
 		$authorised = JAccess::getAuthorisedViewLevels(JFactory::getUser()->get('id'));
 		$articles->setState('filter.access', $access);
 
@@ -43,7 +43,7 @@ abstract class modArticlesCategoryHelper
 			case 'dynamic':
 				$option = JRequest::getCmd('option');
 				$view = JRequest::getCmd('view');
-				if ($option === 'com_content') {
+				if ($option === 'com_portfolio') {
 					switch($view)
 					{
 						case 'category':
@@ -85,7 +85,7 @@ abstract class modArticlesCategoryHelper
 					}
 				}
 				else {
-					// Return right away if not on a com_content page
+					// Return right away if not on a com_portfolio page
 					return;
 				}
 
@@ -181,7 +181,7 @@ abstract class modArticlesCategoryHelper
 		$option = JRequest::getCmd('option');
 		$view = JRequest::getCmd('view');
 
-		if ($option === 'com_content' && $view === 'article') {
+		if ($option === 'com_portfolio' && $view === 'article') {
 			$active_article_id = JRequest::getInt('id');
 		}
 		else {

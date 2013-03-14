@@ -20,7 +20,7 @@ require_once dirname(__FILE__).'/helper.php';
 			case 'dynamic':
 				$option = JRequest::getCmd('option');
 				$view = JRequest::getCmd('view');
-				if ($option === 'com_content') {
+				if ($option === 'com_portfolio') {
 					switch($view)
 					{
 						case 'category':

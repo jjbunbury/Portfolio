@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
  * View to edit an article.
  *
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.6
  */
 class ContentViewArticle extends JViewLegacy
@@ -69,7 +69,7 @@ class ContentViewArticle extends JViewLegacy
 		// Built the actions for new and existing records.
 
 		// For new records, check the create permission.
-		if ($isNew && (count($user->getAuthorisedCategories('com_content', 'core.create')) > 0)) {
+		if ($isNew && (count($user->getAuthorisedCategories('com_portfolio', 'core.create')) > 0)) {
 			JToolBarHelper::apply('article.apply');
 			JToolBarHelper::save('article.save');
 			JToolBarHelper::save2new('article.save2new');

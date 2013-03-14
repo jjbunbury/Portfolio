@@ -8,9 +8,9 @@
 
 defined('_JEXEC') or die;
 
-require_once JPATH_SITE.'/components/com_content/helpers/route.php';
+require_once JPATH_SITE.'/components/com_portfolio/helpers/route.php';
 
-JModelLegacy::addIncludePath(JPATH_SITE.'/components/com_content/models', 'ContentModel');
+JModelLegacy::addIncludePath(JPATH_SITE.'/components/com_portfolio/models', 'ContentModel');
 
 abstract class modArticlesPopularHelper
 {
@@ -31,7 +31,7 @@ abstract class modArticlesPopularHelper
 		$model->setState('filter.featured', $params->get('show_front', 1) == 1 ? 'show' : 'hide');
 
 		// Access filter
-		$access = !JComponentHelper::getParams('com_content')->get('show_noauth');
+		$access = !JComponentHelper::getParams('com_portfolio')->get('show_noauth');
 		$authorised = JAccess::getAuthorisedViewLevels(JFactory::getUser()->get('id'));
 		$model->setState('filter.access', $access);
 

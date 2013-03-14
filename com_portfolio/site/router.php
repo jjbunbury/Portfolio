@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
 jimport('joomla.application.categories');
 
 /**
- * Build the route for the com_content component
+ * Build the route for the com_portfolio component
  *
  * @param	array	An array of URL arguments
  * @return	array	The URL arguments to use to assemble the subsequent URL.
@@ -23,7 +23,7 @@ function ContentBuildRoute(&$query)
 	// get a menu item based on Itemid or currently active
 	$app		= JFactory::getApplication();
 	$menu		= $app->getMenu();
-	$params		= JComponentHelper::getParams('com_content');
+	$params		= JComponentHelper::getParams('com_portfolio');
 	$advanced	= $params->get('sef_advanced_link', 0);
 
 	// we need a menu item.  Either the one specified in the query, or the current active one if none specified
@@ -204,7 +204,7 @@ function ContentParseRoute($segments)
 	$app	= JFactory::getApplication();
 	$menu	= $app->getMenu();
 	$item	= $menu->getActive();
-	$params = JComponentHelper::getParams('com_content');
+	$params = JComponentHelper::getParams('com_portfolio');
 	$advanced = $params->get('sef_advanced_link', 0);
 	$db = JFactory::getDBO();
 

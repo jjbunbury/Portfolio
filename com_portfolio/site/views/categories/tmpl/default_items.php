@@ -2,7 +2,7 @@
 
 /**
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -29,7 +29,7 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
 		<?php if ($this->params->get('show_subcat_desc_cat') == 1) :?>
 		<?php if ($item->description) : ?>
 			<div class="category-desc">
-				<?php echo JHtml::_('content.prepare', $item->description, '', 'com_content.categories'); ?>
+				<?php echo JHtml::_('content.prepare', $item->description, '', 'com_portfolio.categories'); ?>
 			</div>
 		<?php endif; ?>
         <?php endif; ?>

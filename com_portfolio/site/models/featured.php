@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -15,7 +15,7 @@ require_once dirname(__FILE__) . '/articles.php';
  * Frontpage Component Model
  *
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since 1.5
  */
 class ContentModelFeatured extends ContentModelArticles
@@ -25,7 +25,7 @@ class ContentModelFeatured extends ContentModelArticles
 	 *
 	 * @var		string
 	 */
-	public $_context = 'com_content.frontpage';
+	public $_context = 'com_portfolio.frontpage';
 
 	/**
 	 * Method to auto-populate the model state.
@@ -50,7 +50,7 @@ class ContentModelFeatured extends ContentModelArticles
 		$this->setState('filter.frontpage', true);
 
 		$user		= JFactory::getUser();
-		if ((!$user->authorise('core.edit.state', 'com_content')) &&  (!$user->authorise('core.edit', 'com_content'))){
+		if ((!$user->authorise('core.edit.state', 'com_portfolio')) &&  (!$user->authorise('core.edit', 'com_portfolio'))){
 			// filter on published for those who do not have edit or edit.state rights.
 			$this->setState('filter.published', 1);
 		}

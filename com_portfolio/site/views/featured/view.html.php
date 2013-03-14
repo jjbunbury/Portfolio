@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
  * Frontpage View class
  *
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.5
  */
 class ContentViewFeatured extends JViewLegacy
@@ -70,15 +70,15 @@ class ContentViewFeatured extends JViewLegacy
 
 			$dispatcher = JDispatcher::getInstance();
 
-			$item->introtext = JHtml::_('content.prepare', $item->introtext, '', 'com_content.featured');
+			$item->introtext = JHtml::_('content.prepare', $item->introtext, '', 'com_portfolio.featured');
 
-			$results = $dispatcher->trigger('onContentAfterTitle', array('com_content.article', &$item, &$item->params, 0));
+			$results = $dispatcher->trigger('onContentAfterTitle', array('com_portfolio.article', &$item, &$item->params, 0));
 			$item->event->afterDisplayTitle = trim(implode("\n", $results));
 
-			$results = $dispatcher->trigger('onContentBeforeDisplay', array('com_content.article', &$item, &$item->params, 0));
+			$results = $dispatcher->trigger('onContentBeforeDisplay', array('com_portfolio.article', &$item, &$item->params, 0));
 			$item->event->beforeDisplayContent = trim(implode("\n", $results));
 
-			$results = $dispatcher->trigger('onContentAfterDisplay', array('com_content.article', &$item, &$item->params, 0));
+			$results = $dispatcher->trigger('onContentAfterDisplay', array('com_portfolio.article', &$item, &$item->params, 0));
 			$item->event->afterDisplayContent = trim(implode("\n", $results));
 		}
 

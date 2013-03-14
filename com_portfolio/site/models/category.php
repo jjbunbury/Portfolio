@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -15,7 +15,7 @@ jimport('joomla.application.component.modellist');
  * sibling, child and parent categories.
  *
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.5
  */
 class ContentModelCategory extends JModelList
@@ -40,7 +40,7 @@ class ContentModelCategory extends JModelList
 	 *
 	 * @var		string
 	 */
-	protected $_context = 'com_content.category';
+	protected $_context = 'com_portfolio.category';
 
 	/**
 	 * The category that applies.
@@ -127,7 +127,7 @@ class ContentModelCategory extends JModelList
 		$query	= $db->getQuery(true);
 		$groups	= implode(',', $user->getAuthorisedViewLevels());
 
-		if ((!$user->authorise('core.edit.state', 'com_content')) &&  (!$user->authorise('core.edit', 'com_content'))){
+		if ((!$user->authorise('core.edit.state', 'com_portfolio')) &&  (!$user->authorise('core.edit', 'com_portfolio'))){
 			// limit to published for people who can't edit or edit.state.
 			$this->setState('filter.published', 1);
 			// Filter by start and end dates.
@@ -154,13 +154,13 @@ class ContentModelCategory extends JModelList
 
 		// filter.order
 		$itemid = JRequest::getInt('id', 0) . ':' . JRequest::getInt('Itemid', 0);
-		$orderCol = $app->getUserStateFromRequest('com_content.category.list.' . $itemid . '.filter_order', 'filter_order', '', 'string');
+		$orderCol = $app->getUserStateFromRequest('com_portfolio.category.list.' . $itemid . '.filter_order', 'filter_order', '', 'string');
 		if (!in_array($orderCol, $this->filter_fields)) {
 			$orderCol = 'a.ordering';
 		}
 		$this->setState('list.ordering', $orderCol);
 
-		$listOrder = $app->getUserStateFromRequest('com_content.category.list.' . $itemid . '.filter_order_Dir',
+		$listOrder = $app->getUserStateFromRequest('com_portfolio.category.list.' . $itemid . '.filter_order_Dir',
 			'filter_order_Dir', '', 'cmd');
 		if (!in_array(strtoupper($listOrder), array('ASC', 'DESC', ''))) {
 			$listOrder = 'ASC';
@@ -175,7 +175,7 @@ class ContentModelCategory extends JModelList
 			$this->setState('list.links', $params->get('num_links'));
 		}
 		else {
-			$limit = $app->getUserStateFromRequest('com_content.category.list.' . $itemid . '.limit', 'limit', $params->get('display_num'), 'uint');
+			$limit = $app->getUserStateFromRequest('com_portfolio.category.list.' . $itemid . '.limit', 'limit', $params->get('display_num'), 'uint');
 		}
 
 		$this->setState('list.limit', $limit);
@@ -253,8 +253,8 @@ class ContentModelCategory extends JModelList
 		$db			= $this->getDbo();
 		$params		= $this->state->params;
 		$itemid		= JRequest::getInt('id', 0) . ':' . JRequest::getInt('Itemid', 0);
-		$orderCol	= $app->getUserStateFromRequest('com_content.category.list.' . $itemid . '.filter_order', 'filter_order', '', 'string');
-		$orderDirn	= $app->getUserStateFromRequest('com_content.category.list.' . $itemid . '.filter_order_Dir', 'filter_order_Dir', '', 'cmd');
+		$orderCol	= $app->getUserStateFromRequest('com_portfolio.category.list.' . $itemid . '.filter_order', 'filter_order', '', 'string');
+		$orderDirn	= $app->getUserStateFromRequest('com_portfolio.category.list.' . $itemid . '.filter_order_Dir', 'filter_order_Dir', '', 'cmd');
 		$orderby	= ' ';
 
 		if (!in_array($orderCol, $this->filter_fields)) {
@@ -315,7 +315,7 @@ class ContentModelCategory extends JModelList
 			if (is_object($this->_item)) {
 				$user	= JFactory::getUser();
 				$userId	= $user->get('id');
-				$asset	= 'com_content.category.'.$this->_item->id;
+				$asset	= 'com_portfolio.category.'.$this->_item->id;
 
 				// Check general create permission.
 				if ($user->authorise('core.create', $asset)) {

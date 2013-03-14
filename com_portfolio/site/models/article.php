@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -15,7 +15,7 @@ jimport('joomla.application.component.modelitem');
  * Content Component Article Model
  *
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since 1.5
  */
 class ContentModelArticle extends JModelItem
@@ -25,7 +25,7 @@ class ContentModelArticle extends JModelItem
 	 *
 	 * @var		string
 	 */
-	protected $_context = 'com_content.article';
+	protected $_context = 'com_portfolio.article';
 
 	/**
 	 * Method to auto-populate the model state.
@@ -51,7 +51,7 @@ class ContentModelArticle extends JModelItem
 
 		// TODO: Tune these values based on other permissions.
 		$user		= JFactory::getUser();
-		if ((!$user->authorise('core.edit.state', 'com_content')) &&  (!$user->authorise('core.edit', 'com_content'))){
+		if ((!$user->authorise('core.edit.state', 'com_portfolio')) &&  (!$user->authorise('core.edit', 'com_portfolio'))){
 			$this->setState('filter.published', 1);
 			$this->setState('filter.archived', 2);
 		}
@@ -134,7 +134,7 @@ class ContentModelArticle extends JModelItem
 				// If all categories are published, badcats.id will be null, and we just use the article state
 				$subquery = ' (SELECT cat.id as id FROM #__categories AS cat JOIN #__categories AS parent ';
 				$subquery .= 'ON cat.lft BETWEEN parent.lft AND parent.rgt ';
-				$subquery .= 'WHERE parent.extension = ' . $db->quote('com_content');
+				$subquery .= 'WHERE parent.extension = ' . $db->quote('com_portfolio');
 				$subquery .= ' AND parent.published <= 0 GROUP BY cat.id)';
 				$query->join('LEFT OUTER', $subquery . ' AS badcats ON badcats.id = c.id');
 
@@ -180,7 +180,7 @@ class ContentModelArticle extends JModelItem
 				// Technically guest could edit an article, but lets not check that to improve performance a little.
 				if (!$user->get('guest')) {
 					$userId	= $user->get('id');
-					$asset	= 'com_content.article.'.$data->id;
+					$asset	= 'com_portfolio.article.'.$data->id;
 
 					// Check general edit permission first.
 					if ($user->authorise('core.edit', $asset)) {

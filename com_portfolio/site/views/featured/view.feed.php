@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
  * Frontpage View class
  *
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.5
  */
 class ContentViewFeatured extends JViewLegacy
@@ -24,7 +24,7 @@ class ContentViewFeatured extends JViewLegacy
 		$feedEmail	= $app->getCfg('feed_email', 'author');
 		$siteEmail	= $app->getCfg('mailfrom');
 
-		$doc->link	= JRoute::_('index.php?option=com_content&view=featured');
+		$doc->link	= JRoute::_('index.php?option=com_portfolio&view=featured');
 
 		// Get some data from the model
 		JRequest::setVar('limit', $app->getCfg('feed_limit'));

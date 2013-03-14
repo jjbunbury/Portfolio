@@ -28,7 +28,7 @@
 			<field
 				name="parent"
 				type="category"
-				extension="com_content"
+				extension="com_portfolio"
 				published=""
 				label="MOD_ARTICLES_CATEGORIES_FIELD_PARENT_LABEL"
 				description="MOD_ARTICLES_CATEGORIES_FIELD_PARENT_DESC"/>

@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
  * HTML Article View class for the Content component
  *
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.5
  */
 class ContentViewArticle extends JViewLegacy
@@ -120,16 +120,16 @@ class ContentViewArticle extends JViewLegacy
 		// Process the content plugins.
 		//
 		JPluginHelper::importPlugin('content');
-		$results = $dispatcher->trigger('onContentPrepare', array ('com_content.article', &$item, &$this->params, $offset));
+		$results = $dispatcher->trigger('onContentPrepare', array ('com_portfolio.article', &$item, &$this->params, $offset));
 
 		$item->event = new stdClass();
-		$results = $dispatcher->trigger('onContentAfterTitle', array('com_content.article', &$item, &$this->params, $offset));
+		$results = $dispatcher->trigger('onContentAfterTitle', array('com_portfolio.article', &$item, &$this->params, $offset));
 		$item->event->afterDisplayTitle = trim(implode("\n", $results));
 
-		$results = $dispatcher->trigger('onContentBeforeDisplay', array('com_content.article', &$item, &$this->params, $offset));
+		$results = $dispatcher->trigger('onContentBeforeDisplay', array('com_portfolio.article', &$item, &$this->params, $offset));
 		$item->event->beforeDisplayContent = trim(implode("\n", $results));
 
-		$results = $dispatcher->trigger('onContentAfterDisplay', array('com_content.article', &$item, &$this->params, $offset));
+		$results = $dispatcher->trigger('onContentAfterDisplay', array('com_portfolio.article', &$item, &$this->params, $offset));
 		$item->event->afterDisplayContent = trim(implode("\n", $results));
 
 		// Increment the hit counter of the article.
@@ -173,7 +173,7 @@ class ContentViewArticle extends JViewLegacy
 		$id = (int) @$menu->query['id'];
 
 		// if the menu item does not concern this article
-		if ($menu && ($menu->query['option'] != 'com_content' || $menu->query['view'] != 'article' || $id != $this->item->id))
+		if ($menu && ($menu->query['option'] != 'com_portfolio' || $menu->query['view'] != 'article' || $id != $this->item->id))
 		{
 			// If this is not a single article menu item, set the page title to the article title
 			if ($this->item->title) {
@@ -181,7 +181,7 @@ class ContentViewArticle extends JViewLegacy
 			}
 			$path = array(array('title' => $this->item->title, 'link' => ''));
 			$category = JCategories::getInstance('Content')->get($this->item->catid);
-			while ($category && ($menu->query['option'] != 'com_content' || $menu->query['view'] == 'article' || $id != $category->id) && $category->id > 1)
+			while ($category && ($menu->query['option'] != 'com_portfolio' || $menu->query['view'] == 'article' || $id != $category->id) && $category->id > 1)
 			{
 				$path[] = array('title' => $category->title, 'link' => ContentHelperRoute::getCategoryRoute($category->id));
 				$category = $category->getParent();

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="2.5" method="upgrade">
-	<name>com_content</name>
+	<name>com_portfolio</name>
 	<author>Joomla! Project</author>
 	<creationDate>April 2006</creationDate>
 	<copyright>(C) 2005 - 2013 Open Source Matters. All rights reserved.	</copyright>
@@ -19,7 +19,7 @@
 		<folder>models</folder>
 	</files>
 	<languages folder="site">
-		<language tag="en-GB">language/en-GB.com_content.ini
+		<language tag="en-GB">language/en-GB.com_portfolio.ini
 		</language>
 	</languages>
 	<administration>
@@ -37,7 +37,7 @@
 			<folder>views</folder>
 		</files>
 		<languages folder="admin">
-			<language tag="en-GB">language/en-GB.com_content.ini
+			<language tag="en-GB">language/en-GB.com_portfolio.ini
 			</language>
 		</languages>
 	</administration>

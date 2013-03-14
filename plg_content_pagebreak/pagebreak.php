@@ -56,7 +56,7 @@ class plgContentPagebreak extends JPlugin
 	 */
 	public function onContentPrepare($context, &$row, &$params, $page = 0)
 	{
-		$canProceed = $context == 'com_content.article';
+		$canProceed = $context == 'com_portfolio.article';
 		if (!$canProceed) {
 			return;
 		}

@@ -80,7 +80,7 @@
 					</option>
 				</field>
 
-				<field name="catid" type="category" extension="com_content"
+				<field name="catid" type="category" extension="com_portfolio"
 					multiple="true" size="5"
 					label="JCATEGORY"
 					description="MOD_ARTICLES_CATEGORY_FIELD_CATEGORY_DESC"

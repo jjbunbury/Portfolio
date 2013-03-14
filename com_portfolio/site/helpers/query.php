@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -14,7 +14,7 @@ defined('_JEXEC') or die;
  *
  * @static
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.5
  */
 class ContentHelperQuery
@@ -155,7 +155,7 @@ class ContentHelperQuery
 	public static function buildVotingQuery($params=null)
 	{
 		if (!$params) {
-			$params = JComponentHelper::getParams('com_content');
+			$params = JComponentHelper::getParams('com_portfolio');
 		}
 
 		$voting = $params->get('show_vote');

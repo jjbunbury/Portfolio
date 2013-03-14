@@ -31,7 +31,7 @@ class modArchiveHelper
 
 		$app	= JFactory::getApplication();
 		$menu	= $app->getMenu();
-		$item	= $menu->getItems('link', 'index.php?option=com_content&view=archive', true);
+		$item	= $menu->getItems('link', 'index.php?option=com_portfolio&view=archive', true);
 		$itemid = (isset($item) && !empty($item->id) ) ? '&Itemid='.$item->id : '';
 
 		$i		= 0;
@@ -47,7 +47,7 @@ class modArchiveHelper
 
 			$lists[$i] = new stdClass;
 
-			$lists[$i]->link	= JRoute::_('index.php?option=com_content&view=archive&year='.$created_year.'&month='.$created_month.$itemid);
+			$lists[$i]->link	= JRoute::_('index.php?option=com_portfolio&view=archive&year='.$created_year.'&month='.$created_month.$itemid);
 			$lists[$i]->text	= JText::sprintf('MOD_ARTICLES_ARCHIVE_DATE', $month_name_cal, $created_year_cal);
 
 			$i++;

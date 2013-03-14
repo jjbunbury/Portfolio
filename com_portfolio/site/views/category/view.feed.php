@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
  * HTML View class for the Content component
  *
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since 1.5
  */
 class ContentViewCategory extends JViewLegacy

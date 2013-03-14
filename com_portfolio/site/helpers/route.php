@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -17,7 +17,7 @@ jimport('joomla.application.categories');
  *
  * @static
  * @package		Joomla.Site
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since 1.5
  */
 abstract class ContentHelperRoute
@@ -33,7 +33,7 @@ abstract class ContentHelperRoute
 			'article'  => array((int) $id)
 		);
 		//Create the link
-		$link = 'index.php?option=com_content&view=article&id='. $id;
+		$link = 'index.php?option=com_portfolio&view=article&id='. $id;
 		if ((int)$catid > 1)
 		{
 			$categories = JCategories::getInstance('Content');
@@ -102,7 +102,7 @@ abstract class ContentHelperRoute
 			else
 			{
 				//Create the link
-				$link = 'index.php?option=com_content&view=category&id='.$id;
+				$link = 'index.php?option=com_portfolio&view=category&id='.$id;
 				if($category)
 				{
 					$catids = array_reverse($category->getPath());
@@ -127,9 +127,9 @@ abstract class ContentHelperRoute
 	{
 		//Create the link
 		if ($id) {
-			$link = 'index.php?option=com_content&task=article.edit&a_id='. $id;
+			$link = 'index.php?option=com_portfolio&task=article.edit&a_id='. $id;
 		} else {
-			$link = 'index.php?option=com_content&task=article.edit&a_id=0';
+			$link = 'index.php?option=com_portfolio&task=article.edit&a_id=0';
 		}
 
 		return $link;
@@ -145,7 +145,7 @@ abstract class ContentHelperRoute
 		{
 			self::$lookup = array();
 
-			$component	= JComponentHelper::getComponent('com_content');
+			$component	= JComponentHelper::getComponent('com_portfolio');
 			$items		= $menus->getItems('component_id', $component->id);
 			foreach ($items as $item)
 			{
@@ -180,7 +180,7 @@ abstract class ContentHelperRoute
 		else
 		{
 			$active = $menus->getActive();
-			if ($active && $active->component == 'com_content') {
+			if ($active && $active->component == 'com_portfolio') {
 				return $active->id;
 			}
 		}

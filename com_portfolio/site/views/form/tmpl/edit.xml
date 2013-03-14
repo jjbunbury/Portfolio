@@ -21,7 +21,7 @@
 			<field name="catid" 
 				type="category" 
 				label="JGLOBAL_CHOOSE_CATEGORY_LABEL" 
-				extension="com_content" 
+				extension="com_portfolio" 
 				description="JGLOBAL_CHOOSE_CATEGORY_DESC" />
 		</fieldset>
 	</fields>

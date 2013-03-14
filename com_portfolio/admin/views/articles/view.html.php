@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
  * View class for a list of articles.
  *
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  * @since		1.6
  */
 class ContentViewArticles extends JViewLegacy
@@ -73,7 +73,7 @@ class ContentViewArticles extends JViewLegacy
 		$user		= JFactory::getUser();
 		JToolBarHelper::title(JText::_('COM_CONTENT_ARTICLES_TITLE'), 'article.png');
 
-		if ($canDo->get('core.create') || (count($user->getAuthorisedCategories('com_content', 'core.create'))) > 0 ) {
+		if ($canDo->get('core.create') || (count($user->getAuthorisedCategories('com_portfolio', 'core.create'))) > 0 ) {
 			JToolBarHelper::addNew('article.add');
 		}
 
@@ -101,7 +101,7 @@ class ContentViewArticles extends JViewLegacy
 		}
 
 		if ($canDo->get('core.admin')) {
-			JToolBarHelper::preferences('com_content');
+			JToolBarHelper::preferences('com_portfolio');
 			JToolBarHelper::divider();
 		}
 

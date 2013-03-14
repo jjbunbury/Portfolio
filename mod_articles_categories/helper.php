@@ -9,7 +9,7 @@
 // no direct access
 defined('_JEXEC') or die;
 
-require_once JPATH_SITE.'/components/com_content/helpers/route.php';
+require_once JPATH_SITE.'/components/com_portfolio/helpers/route.php';
 jimport('joomla.application.categories');
 
 abstract class modArticlesCategoriesHelper

@@ -15,7 +15,7 @@ require_once dirname(__FILE__).'/article.php';
  * Feature model.
  *
  * @package		Joomla.Administrator
- * @subpackage	com_content
+ * @subpackage	com_portfolio
  */
 class ContentModelFeature extends ContentModelArticle
 {

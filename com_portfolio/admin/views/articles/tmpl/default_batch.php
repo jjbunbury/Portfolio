@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     Joomla.Administrator
- * @subpackage  com_content
+ * @subpackage  com_portfolio
  *
  * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
@@ -19,7 +19,7 @@ $published = $this->state->get('filter.published');
 	<?php echo JHtml::_('batch.language'); ?>
 
 	<?php if ($published >= 0) : ?>
-		<?php echo JHtml::_('batch.item', 'com_content');?>
+		<?php echo JHtml::_('batch.item', 'com_portfolio');?>
 	<?php endif; ?>
 
 	<button type="submit" onclick="Joomla.submitbutton('article.batch');">
