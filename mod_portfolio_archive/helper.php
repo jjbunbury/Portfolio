@@ -9,7 +9,7 @@
 // no direct access
 defined('_JEXEC') or die;
 
-class modArchiveHelper
+class modPortfolioArchiveHelper
 {
 	static function getList(&$params)
 	{
@@ -48,7 +48,7 @@ class modArchiveHelper
 			$lists[$i] = new stdClass;
 
 			$lists[$i]->link	= JRoute::_('index.php?option=com_portfolio&view=archive&year='.$created_year.'&month='.$created_month.$itemid);
-			$lists[$i]->text	= JText::sprintf('MOD_ARTICLES_ARCHIVE_DATE', $month_name_cal, $created_year_cal);
+			$lists[$i]->text	= JText::sprintf('MOD_PORTFOLIO_ARCHIVE_DATE', $month_name_cal, $created_year_cal);
 
 			$i++;
 		}

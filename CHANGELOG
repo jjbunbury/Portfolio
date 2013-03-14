@@ -33,3 +33,4 @@ $ -> Language fix or change
 ^ version bump @since files
 ^ mod_articles_archive renamed as mod_portfolio_archive
 + added missing language ini files
+^ MOD_ARTICLES_ARCHIVE renamd as MOD_PORTFOLIO_ARCHIVE

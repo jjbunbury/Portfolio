@@ -12,7 +12,7 @@
 	<authorEmail>admin@joomla.org</authorEmail>
 	<authorUrl>www.joomla.org</authorUrl>
 	<version>1.0.0</version>
-	<description>MOD_ARTICLES_ARCHIVE_XML_DESCRIPTION</description>
+	<description>MOD_PORTFOLIO_ARCHIVE_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_portfolio_archive">mod_portfolio_archive.php</filename>
 		<folder>tmpl</folder>
@@ -30,8 +30,8 @@
 			<fieldset name="basic">
 				<field name="count" type="text"
 					default="10"
-					label="MOD_ARTICLES_ARCHIVE_FIELD_COUNT_LABEL"
-					description="MOD_ARTICLES_ARCHIVE_FIELD_COUNT_DESC" />
+					label="MOD_PORTFOLIO_ARCHIVE_FIELD_COUNT_LABEL"
+					description="MOD_PORTFOLIO_ARCHIVE_FIELD_COUNT_DESC" />
 			</fieldset>
 
 			<fieldset name="advanced">
