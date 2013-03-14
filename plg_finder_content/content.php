@@ -3,7 +3,7 @@
  * @package     Joomla.Plugin
  * @subpackage  Finder.Content
  *
- * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE
  */
 
@@ -19,7 +19,7 @@ require_once JPATH_ADMINISTRATOR . '/components/com_finder/helpers/indexer/adapt
  *
  * @package     Joomla.Plugin
  * @subpackage  Finder.Content
- * @since       2.5
+ * @since       1.0
  */
 class plgFinderContent extends FinderIndexerAdapter
 {
@@ -27,7 +27,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 * The plugin identifier.
 	 *
 	 * @var    string
-	 * @since  2.5
+	 * @since  1.0
 	 */
 	protected $context = 'Content';
 
@@ -35,7 +35,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 * The extension name.
 	 *
 	 * @var    string
-	 * @since  2.5
+	 * @since  1.0
 	 */
 	protected $extension = 'com_portfolio';
 
@@ -43,7 +43,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 * The sublayout to use when rendering the results.
 	 *
 	 * @var    string
-	 * @since  2.5
+	 * @since  1.0
 	 */
 	protected $layout = 'article';
 
@@ -51,7 +51,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 * The type of content that the adapter indexes.
 	 *
 	 * @var    string
-	 * @since  2.5
+	 * @since  1.0
 	 */
 	protected $type_title = 'Article';
 
@@ -59,7 +59,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 * The table name.
 	 *
 	 * @var    string
-	 * @since  2.5
+	 * @since  1.0
 	 */
 	protected $table = '#__content';
 
@@ -69,7 +69,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 * @param   object  &$subject  The object to observe
 	 * @param   array   $config    An array that holds the plugin configuration
 	 *
-	 * @since   2.5
+	 * @since   1.0
 	 */
 	public function __construct(&$subject, $config)
 	{
@@ -88,7 +88,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 *
 	 * @return  void
 	 *
-	 * @since   2.5
+	 * @since   1.0
 	 */
 	public function onFinderCategoryChangeState($extension, $pks, $value)
 	{
@@ -107,7 +107,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 *
 	 * @return  boolean  True on success.
 	 *
-	 * @since   2.5
+	 * @since   1.0
 	 * @throws  Exception on database error.
 	 */
 	public function onFinderAfterDelete($context, $table)
@@ -137,7 +137,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 *
 	 * @return  boolean  True on success.
 	 *
-	 * @since   2.5
+	 * @since   1.0
 	 * @throws  Exception on database error.
 	 */
 	public function onFinderAfterSave($context, $row, $isNew)
@@ -180,7 +180,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 *
 	 * @return  boolean  True on success.
 	 *
-	 * @since   2.5
+	 * @since   1.0
 	 * @throws  Exception on database error.
 	 */
 	public function onFinderBeforeSave($context, $row, $isNew)
@@ -219,7 +219,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 *
 	 * @return  void
 	 *
-	 * @since   2.5
+	 * @since   1.0
 	 */
 	public function onFinderChangeState($context, $pks, $value)
 	{
@@ -243,7 +243,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 *
 	 * @return  void
 	 *
-	 * @since   2.5
+	 * @since   1.0
 	 * @throws  Exception on database error.
 	 */
 	protected function index(FinderIndexerResult $item, $format = 'html')
@@ -322,7 +322,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 *
 	 * @return  boolean  True on success.
 	 *
-	 * @since   2.5
+	 * @since   1.0
 	 */
 	protected function setup()
 	{
@@ -339,7 +339,7 @@ class plgFinderContent extends FinderIndexerAdapter
 	 *
 	 * @return  JDatabaseQuery  A database object.
 	 *
-	 * @since   2.5
+	 * @since   1.0
 	 */
 	protected function getListQuery($sql = null)
 	{

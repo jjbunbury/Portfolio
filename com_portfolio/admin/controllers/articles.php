@@ -2,7 +2,7 @@
 /**
  * @package		Joomla.Administrator
  * @subpackage	com_portfolio
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -16,7 +16,7 @@ jimport('joomla.application.component.controlleradmin');
  *
  * @package		Joomla.Administrator
  * @subpackage	com_portfolio
- * @since	1.6
+ * @since	1.0
  */
 class ContentControllerArticles extends JControllerAdmin
 {
@@ -27,7 +27,7 @@ class ContentControllerArticles extends JControllerAdmin
 
 	 * @return	ContentControllerArticles
 	 * @see		JController
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function __construct($config = array())
 	{
@@ -45,7 +45,7 @@ class ContentControllerArticles extends JControllerAdmin
 	 * Method to toggle the featured setting of a list of articles.
 	 *
 	 * @return	void
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	function featured()
 	{
@@ -92,7 +92,7 @@ class ContentControllerArticles extends JControllerAdmin
 	 * @param	string	$prefix	The prefix for the PHP class name.
 	 *
 	 * @return	JModel
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function getModel($name = 'Article', $prefix = 'ContentModel', $config = array('ignore_request' => true))
 	{

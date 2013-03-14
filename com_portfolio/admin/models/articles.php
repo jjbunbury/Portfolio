@@ -2,7 +2,7 @@
 /**
  * @package		Joomla.Administrator
  * @subpackage	com_portfolio
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -24,7 +24,7 @@ class ContentModelArticles extends JModelList
 	 *
 	 * @param	array	An optional associative array of configuration settings.
 	 * @see		JController
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function __construct($config = array())
 	{
@@ -59,7 +59,7 @@ class ContentModelArticles extends JModelList
 	 * Note. Calling getState in this method will result in recursion.
 	 *
 	 * @return	void
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function populateState($ordering = null, $direction = null)
 	{
@@ -108,7 +108,7 @@ class ContentModelArticles extends JModelList
 	 * @param	string		$id	A prefix for the store id.
 	 *
 	 * @return	string		A store id.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function getStoreId($id = '')
 	{
@@ -127,7 +127,7 @@ class ContentModelArticles extends JModelList
 	 * Build an SQL query to load the list data.
 	 *
 	 * @return	JDatabaseQuery
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function getListQuery()
 	{
@@ -260,7 +260,7 @@ class ContentModelArticles extends JModelList
 	 * Build a list of authors
 	 *
 	 * @return	JDatabaseQuery
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function getAuthors() {
 		// Create a new query object.
@@ -286,7 +286,7 @@ class ContentModelArticles extends JModelList
 	 * Overridden to add a check for access levels.
 	 *
 	 * @return	mixed	An array of data items on success, false on failure.
-	 * @since	1.6.1
+	 * @since	1.0
 	 */
 	public function getItems()
 	{

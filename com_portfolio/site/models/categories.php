@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -13,7 +13,7 @@ jimport('joomla.application.component.modellist');
  *
  * @package		Joomla.Site
  * @subpackage	com_portfolio
- * @since		1.6
+ * @since		1.0
  */
 class ContentModelCategories extends JModelList
 {
@@ -40,7 +40,7 @@ class ContentModelCategories extends JModelList
 	 *
 	 * Note. Calling getState in this method will result in recursion.
 	 *
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function populateState()
 	{
@@ -86,7 +86,7 @@ class ContentModelCategories extends JModelList
 	 * @param	bool	$recursive	True if you want to return children recursively.
 	 *
 	 * @return	mixed	An array of data items on success, false on failure.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function getItems($recursive = false)
 	{

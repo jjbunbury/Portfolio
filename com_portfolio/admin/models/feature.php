@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -37,7 +37,7 @@ class ContentModelFeature extends ContentModelArticle
 	 *
 	 * @param	object	A record object.
 	 * @return	array	An array of conditions to add to add to ordering queries.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function getReorderConditions($table)
 	{

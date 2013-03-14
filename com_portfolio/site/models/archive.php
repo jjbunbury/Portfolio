@@ -2,7 +2,7 @@
 /**
  * @package		Joomla.Site
  * @subpackage	com_portfolio
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -16,7 +16,7 @@ require_once dirname(__FILE__) . '/articles.php';
  *
  * @package		Joomla.Site
  * @subpackage	com_portfolio
- * @since		1.5
+ * @since		1.0
  */
 class ContentModelArchive extends ContentModelArticles
 {
@@ -32,7 +32,7 @@ class ContentModelArchive extends ContentModelArticles
 	 *
 	 * Note. Calling getState in this method will result in recursion.
 	 *
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function populateState($ordering = null, $direction = null)
 	{

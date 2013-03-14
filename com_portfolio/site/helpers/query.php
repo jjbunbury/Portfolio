@@ -2,7 +2,7 @@
 /**
  * @package		Joomla.Site
  * @subpackage	com_portfolio
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -15,7 +15,7 @@ defined('_JEXEC') or die;
  * @static
  * @package		Joomla.Site
  * @subpackage	com_portfolio
- * @since		1.5
+ * @since		1.0
  */
 class ContentHelperQuery
 {
@@ -25,7 +25,7 @@ class ContentHelperQuery
 	 * @param	string	$orderby	The ordering code.
 	 *
 	 * @return	string	The SQL field(s) to order by.
-	 * @since	1.5
+	 * @since	1.0
 	 */
 	public static function orderbyPrimary($orderby)
 	{
@@ -58,7 +58,7 @@ class ContentHelperQuery
 	 * @param	string	$orderDate	The ordering code for the date.
 	 *
 	 * @return	string	The SQL field(s) to order by.
-	 * @since	1.5
+	 * @since	1.0
 	 */
 	public static function orderbySecondary($orderby, $orderDate = 'created')
 	{
@@ -120,7 +120,7 @@ class ContentHelperQuery
 	 * @param	string	$orderDate	The ordering code.
 	 *
 	 * @return	string	The SQL field(s) to order by.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public static function getQueryDate($orderDate) {
 
@@ -150,7 +150,7 @@ class ContentHelperQuery
 	 * @param	JRegistry	$param	An options object for the article.
 	 *
 	 * @return	array		A named array with "select" and "join" keys.
-	 * @since	1.5
+	 * @since	1.0
 	 */
 	public static function buildVotingQuery($params=null)
 	{
@@ -187,7 +187,7 @@ class ContentHelperQuery
 	 * @param	integer	$numColumns	Number of columns in the layout
 	 *
 	 * @return	array	Reordered array to achieve desired ordering down columns
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public static function orderDownColumns(&$articles, $numColumns = 1)
 	{

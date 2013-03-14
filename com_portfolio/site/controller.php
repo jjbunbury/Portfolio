@@ -2,7 +2,7 @@
 /**
  * @package		Joomla.Site
  * @subpackage	com_portfolio
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
  *
  * @package		Joomla.Site
  * @subpackage	com_portfolio
- * @since		1.5
+ * @since		1.0
  */
 class ContentController extends JControllerLegacy
 {
@@ -39,7 +39,7 @@ class ContentController extends JControllerLegacy
 	 * @param	array			An array of safe url parameters and their variable types, for valid values see {@link JFilterInput::clean()}.
 	 *
 	 * @return	JController		This object to support chaining.
-	 * @since	1.5
+	 * @since	1.0
 	 */
 	public function display($cachable = false, $urlparams = false)
 	{

@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -16,7 +16,7 @@ defined('_JEXEC') or die;
 class plgContentPagenavigation extends JPlugin
 {
 	/**
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function onContentBeforeDisplay($context, &$row, &$params, $page=0)
 	{
@@ -201,7 +201,7 @@ class plgContentPagenavigation extends JPlugin
 
 				$row->pagination = $html;
 				$row->paginationposition = $this->params->get('position', 1);
-				// This will default to the 1.5 and 1.6-1.7 behavior.
+				// This will default to the 1.0 and 1.0-1.7 behavior.
 				$row->paginationrelative = $this->params->get('relative',0);
 			}
 		}

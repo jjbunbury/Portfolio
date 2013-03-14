@@ -2,7 +2,7 @@
 /**
  * @package		Joomla.Administrator
  * @subpackage	com_portfolio
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -176,7 +176,7 @@ endif;
 
 				<?php endif; ?>
 			<?php endforeach; ?>
-			<?php // Not the best place, but here for continuity with 1.5/1/6/1.7 ?>
+			<?php // Not the best place, but here for continuity with 1.0/1/6/1.7 ?>
 			<fieldset class="panelform">
 				<ul class="adminformlist">
 						<li><?php echo $this->form->getLabel('xreference'); ?>

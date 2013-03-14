@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -27,7 +27,7 @@ jimport('joomla.utilities.utility');
  *
  * @package		Joomla.Plugin
  * @subpackage	Content.pagebreak
- * @since		1.6
+ * @since		1.0
  */
 class plgContentPagebreak extends JPlugin
 {
@@ -37,7 +37,7 @@ class plgContentPagebreak extends JPlugin
 	 * @access      protected
 	 * @param       object  $subject The object to observe
 	 * @param       array   $config  An array that holds the plugin configuration
-	 * @since       1.5
+	 * @since       1.0
 	 */
 	public function __construct(& $subject, $config)
 	{
@@ -52,7 +52,7 @@ class plgContentPagebreak extends JPlugin
 	 * @param	int		The 'page' number
 	 *
 	 * @return	void
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function onContentPrepare($context, &$row, &$params, $page = 0)
 	{
@@ -209,7 +209,7 @@ class plgContentPagebreak extends JPlugin
 
 	/**
 	 * @return	void
-	 * @return	1.6
+	 * @return	1.0
 	 */
 	protected function _createTOC(&$row, &$matches, &$page)
 	{
@@ -292,7 +292,7 @@ class plgContentPagebreak extends JPlugin
 
 	/**
 	 * @return	void
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function _createNavigation(&$row, $page, $n)
 	{

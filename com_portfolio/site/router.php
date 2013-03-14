@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Site
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -14,7 +14,7 @@ jimport('joomla.application.categories');
  *
  * @param	array	An array of URL arguments
  * @return	array	The URL arguments to use to assemble the subsequent URL.
- * @since	1.5
+ * @since	1.0
  */
 function ContentBuildRoute(&$query)
 {
@@ -194,7 +194,7 @@ function ContentBuildRoute(&$query)
  * @param	array	The segments of the URL to parse.
  *
  * @return	array	The URL attributes to be used by the application.
- * @since	1.5
+ * @since	1.0
  */
 function ContentParseRoute($segments)
 {

@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -14,7 +14,7 @@ require_once JPATH_SITE.'/components/com_portfolio/router.php';
  *
  * @package		Joomla.Plugin
  * @subpackage	Search.content
- * @since		1.6
+ * @since		1.0
  */
 class plgSearchContent extends JPlugin
 {

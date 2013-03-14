@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
  *
  * @package		Joomla.Administrator
  * @subpackage	com_portfolio
- * @since		1.6
+ * @since		1.0
  */
 class ContentHelper
 {
@@ -24,7 +24,7 @@ class ContentHelper
 	 * @param	string	$vName	The name of the active view.
 	 *
 	 * @return	void
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public static function addSubmenu($vName)
 	{
@@ -51,11 +51,11 @@ class ContentHelper
 	 * @param	int		The article ID.
 	 *
 	 * @return	JObject
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public static function getActions($categoryId = 0, $articleId = 0)
 	{
-		// Reverted a change for version 2.5.6
+		// Reverted a change for version 1.0.6
 		$user	= JFactory::getUser();
 		$result	= new JObject;
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
  *
  * @package		Joomla.Plugin
  * @subpackage	Editors-xtd.article
- * @since 1.5
+ * @since 1.0
  */
 class plgButtonArticle extends JPlugin
 {
@@ -22,7 +22,7 @@ class plgButtonArticle extends JPlugin
 	 * @access      protected
 	 * @param       object  $subject The object to observe
 	 * @param       array   $config  An array that holds the plugin configuration
-	 * @since       1.5
+	 * @since       1.0
 	 */
 	public function __construct(& $subject, $config)
 	{

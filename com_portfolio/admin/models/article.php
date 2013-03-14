@@ -2,7 +2,7 @@
 /**
  * @package		Joomla.Administrator
  * @subpackage	com_portfolio
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -19,13 +19,13 @@ require_once JPATH_COMPONENT_ADMINISTRATOR.'/helpers/content.php';
  *
  * @package		Joomla.Administrator
  * @subpackage	com_portfolio
- * @since		1.6
+ * @since		1.0
  */
 class ContentModelArticle extends JModelAdmin
 {
 	/**
 	 * @var		string	The prefix to use with controller messages.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected $text_prefix = 'COM_CONTENT';
 
@@ -38,7 +38,7 @@ class ContentModelArticle extends JModelAdmin
 	 *
 	 * @return  mixed  An array of new IDs on success, boolean false on failure.
 	 *
-	 * @since	11.1
+	 * @since	1.0
 	 */
 	protected function batchCopy($value, $pks, $contexts)
 	{
@@ -169,7 +169,7 @@ class ContentModelArticle extends JModelAdmin
 	 * @param	object	$record	A record object.
 	 *
 	 * @return	boolean	True if allowed to delete the record. Defaults to the permission set in the component.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function canDelete($record)
 	{
@@ -188,7 +188,7 @@ class ContentModelArticle extends JModelAdmin
 	 * @param	object	$record	A record object.
 	 *
 	 * @return	boolean	True if allowed to change the state of the record. Defaults to the permission set in the component.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function canEditState($record)
 	{
@@ -214,7 +214,7 @@ class ContentModelArticle extends JModelAdmin
 	 * @param	JTable	A JTable object.
 	 *
 	 * @return	void
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function prepareTable(&$table)
 	{
@@ -292,7 +292,7 @@ class ContentModelArticle extends JModelAdmin
 	 * @param	boolean	$loadData	True if the form is to load its own data (default case), false if not.
 	 *
 	 * @return	mixed	A JForm object on success, false on failure
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function getForm($data = array(), $loadData = true)
 	{
@@ -360,7 +360,7 @@ class ContentModelArticle extends JModelAdmin
 	 * Method to get the data that should be injected in the form.
 	 *
 	 * @return	mixed	The data for the form.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function loadFormData()
 	{
@@ -386,7 +386,7 @@ class ContentModelArticle extends JModelAdmin
 	 * @param	array	The form data.
 	 *
 	 * @return	boolean	True on success.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function save($data)
 	{
@@ -518,7 +518,7 @@ class ContentModelArticle extends JModelAdmin
 	 * @param	object	A record object.
 	 *
 	 * @return	array	An array of conditions to add to add to ordering queries.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function getReorderConditions($table)
 	{
@@ -530,7 +530,7 @@ class ContentModelArticle extends JModelAdmin
 	/**
 	 * Custom clean the cache of com_portfolio and content modules
 	 *
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function cleanCache($group = null, $client_id = 0)
 	{

@@ -2,8 +2,7 @@
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_portfolio
- *
- * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -15,7 +14,7 @@ jimport('joomla.application.component.controllerform');
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_portfolio
- * @since       1.6
+ * @since       1.0
  */
 class ContentControllerArticle extends JControllerForm
 {
@@ -24,7 +23,7 @@ class ContentControllerArticle extends JControllerForm
 	 *
 	 * @param   array  $config  A named array of configuration variables.
 	 *
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	function __construct($config = array())
 	{
@@ -46,7 +45,7 @@ class ContentControllerArticle extends JControllerForm
 	 *
 	 * @return  boolean
 	 *
-	 * @since   1.6
+	 * @since   1.0
 	 */
 	protected function allowAdd($data = array())
 	{
@@ -80,7 +79,7 @@ class ContentControllerArticle extends JControllerForm
 	 *
 	 * @return  boolean
 	 *
-	 * @since   1.6
+	 * @since   1.0
 	 */
 	protected function allowEdit($data = array(), $key = 'id')
 	{
@@ -132,7 +131,7 @@ class ContentControllerArticle extends JControllerForm
 	 *
 	 * @return  boolean	 True if successful, false otherwise and internal error is set.
 	 *
-	 * @since   1.6
+	 * @since   1.0
 	 */
 	public function batch($model = null)
 	{

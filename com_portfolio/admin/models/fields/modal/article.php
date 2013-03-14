@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -11,7 +11,7 @@ defined('JPATH_BASE') or die;
  *
  * @package		Joomla.Administrator
  * @subpackage	com_portfolio
- * @since		1.6
+ * @since		1.0
  */
 class JFormFieldModal_Article extends JFormField
 {
@@ -19,7 +19,7 @@ class JFormFieldModal_Article extends JFormField
 	 * The form field type.
 	 *
 	 * @var		string
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected $type = 'Modal_Article';
 
@@ -27,7 +27,7 @@ class JFormFieldModal_Article extends JFormField
 	 * Method to get the field input markup.
 	 *
 	 * @return	string	The field input markup.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function getInput()
 	{

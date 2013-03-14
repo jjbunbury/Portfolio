@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -13,7 +13,7 @@ jimport('joomla.application.component.modellist');
  *
  * @package		Joomla.Site
  * @subpackage	com_portfolio
- * @since		1.6
+ * @since		1.0
  */
 class ContentModelArticles extends JModelList
 {
@@ -23,7 +23,7 @@ class ContentModelArticles extends JModelList
 	 *
 	 * @param	array	An optional associative array of configuration settings.
 	 * @see		JController
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function __construct($config = array())
 	{
@@ -59,7 +59,7 @@ class ContentModelArticles extends JModelList
 	 * Note. Calling getState in this method will result in recursion.
 	 *
 	 * @return	void
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function populateState($ordering = 'ordering', $direction = 'ASC')
 	{
@@ -116,7 +116,7 @@ class ContentModelArticles extends JModelList
 	 * @param	string		$id	A prefix for the store id.
 	 *
 	 * @return	string		A store id.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function getStoreId($id = '')
 	{
@@ -145,7 +145,7 @@ class ContentModelArticles extends JModelList
 	 * Get the master query for retrieving a list of articles subject to the model state.
 	 *
 	 * @return	JDatabaseQuery
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	function getListQuery()
 	{
@@ -469,7 +469,7 @@ class ContentModelArticles extends JModelList
 	 * Overriden to inject convert the attribs field into a JParameter object.
 	 *
 	 * @return	mixed	An array of objects on success, false on failure.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function getItems()
 	{

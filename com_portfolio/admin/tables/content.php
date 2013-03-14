@@ -3,7 +3,7 @@
  * @package     Joomla.Platform
  * @subpackage  Database
  *
- * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE
  */
 
@@ -17,7 +17,7 @@ jimport('joomla.database.table');
  *
  * @package     Joomla.Platform
  * @subpackage  Table
- * @since       11.1
+ * @since       1.0
  */
 class JTableContent extends JTable
 {
@@ -26,7 +26,7 @@ class JTableContent extends JTable
 	 *
 	 * @param   JDatabase  &$db  A database connector object
 	 *
-	 * @since   11.1
+	 * @since   1.0
 	 */
 	public function __construct(&$db)
 	{
@@ -40,7 +40,7 @@ class JTableContent extends JTable
 	 *
 	 * @return  string
 	 *
-	 * @since   11.1
+	 * @since   1.0
 	 */
 	protected function _getAssetName()
 	{
@@ -53,7 +53,7 @@ class JTableContent extends JTable
 	 *
 	 * @return  string
 	 *
-	 * @since   11.1
+	 * @since   1.0
 	 */
 	protected function _getAssetTitle()
 	{
@@ -68,7 +68,7 @@ class JTableContent extends JTable
 	 *
 	 * @return  integer
 	 *
-	 * @since   11.1
+	 * @since   1.0
 	 */
 	protected function _getAssetParentId($table = null, $id = null)
 	{
@@ -113,7 +113,7 @@ class JTableContent extends JTable
 	 * @return  mixed  Null if operation was satisfactory, otherwise returns an error string
 	 *
 	 * @see     JTable::bind
-	 * @since   11.1
+	 * @since   1.0
 	 */
 	public function bind($array, $ignore = '')
 	{
@@ -164,7 +164,7 @@ class JTableContent extends JTable
 	 * @return  boolean  True on success, false on failure
 	 *
 	 * @see     JTable::check
-	 * @since   11.1
+	 * @since   1.0
 	 */
 	public function check()
 	{
@@ -235,7 +235,7 @@ class JTableContent extends JTable
 	 *
 	 * @return  boolean  True on success.
 	 *
-	 * @since   11.1
+	 * @since   1.0
 	 */
 	public function store($updateNulls = false)
 	{
@@ -283,7 +283,7 @@ class JTableContent extends JTable
 	 *
 	 * @return  boolean  True on success.
 	 *
-	 * @since   11.1
+	 * @since   1.0
 	 */
 	public function publish($pks = null, $state = 1, $userId = 0)
 	{
@@ -368,7 +368,7 @@ class JTableContent extends JTable
 	 *
 	 * @return  string  Record in XML format
 	 *
-	 * @since   11.1
+	 * @since   1.0
 	 * @deprecated  12.1
 	 * @codeCoverageIgnore
 	 */

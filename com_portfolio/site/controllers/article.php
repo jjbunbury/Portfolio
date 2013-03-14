@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -16,12 +16,12 @@ jimport('joomla.application.component.controllerform');
 class ContentControllerArticle extends JControllerForm
 {
 	/**
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected $view_item = 'form';
 
 	/**
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected $view_list = 'categories';
 
@@ -29,7 +29,7 @@ class ContentControllerArticle extends JControllerForm
 	 * Method to add a new record.
 	 *
 	 * @return	boolean	True if the article can be added, false if not.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function add()
 	{
@@ -45,7 +45,7 @@ class ContentControllerArticle extends JControllerForm
 	 * @param	array	An array of input data.
 	 *
 	 * @return	boolean
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function allowAdd($data = array())
 	{
@@ -75,7 +75,7 @@ class ContentControllerArticle extends JControllerForm
 	 * @param	string	$key	The name of the key for the primary key.
 	 *
 	 * @return	boolean
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function allowEdit($data = array(), $key = 'id')
 	{
@@ -122,7 +122,7 @@ class ContentControllerArticle extends JControllerForm
 	 * @param	string	$key	The name of the primary key of the URL variable.
 	 *
 	 * @return	Boolean	True if access level checks pass, false otherwise.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function cancel($key = 'a_id')
 	{
@@ -139,7 +139,7 @@ class ContentControllerArticle extends JControllerForm
 	 * @param	string	$urlVar	The name of the URL variable if different from the primary key (sometimes required to avoid router collisions).
 	 *
 	 * @return	Boolean	True if access level check and checkout passes, false otherwise.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function edit($key = null, $urlVar = 'a_id')
 	{
@@ -157,7 +157,7 @@ class ContentControllerArticle extends JControllerForm
 	 *
 	 * @return	object	The model.
 	 *
-	 * @since	1.5
+	 * @since	1.0
 	 */
 	public function getModel($name = 'form', $prefix = '', $config = array('ignore_request' => true))
 	{
@@ -173,7 +173,7 @@ class ContentControllerArticle extends JControllerForm
 	 * @param	string	$urlVar		The name of the URL variable for the id.
 	 *
 	 * @return	string	The arguments to append to the redirect URL.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function getRedirectToItemAppend($recordId = null, $urlVar = 'a_id')
 	{
@@ -222,7 +222,7 @@ class ContentControllerArticle extends JControllerForm
 	 * If a "return" variable has been passed in the request
 	 *
 	 * @return	string	The return URL.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function getReturnPage()
 	{
@@ -243,7 +243,7 @@ class ContentControllerArticle extends JControllerForm
 	 * @param	array	$validData	The validated data.
 	 *
 	 * @return	void
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function postSaveHook(JModel &$model, $validData)
 	{
@@ -261,7 +261,7 @@ class ContentControllerArticle extends JControllerForm
 	 * @param	string	$urlVar	The name of the URL variable if different from the primary key (sometimes required to avoid router collisions).
 	 *
 	 * @return	Boolean	True if successful, false otherwise.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function save($key = null, $urlVar = 'a_id')
 	{
@@ -282,7 +282,7 @@ class ContentControllerArticle extends JControllerForm
 	 * Method to save a vote.
 	 *
 	 * @return	void
-	 * @since	1.6.1
+	 * @since	1.0.1
 	 */
 	function vote()
 	{

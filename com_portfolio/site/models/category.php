@@ -2,7 +2,7 @@
 /**
  * @package		Joomla.Site
  * @subpackage	com_portfolio
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Dazzle Software, LLC. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -16,7 +16,7 @@ jimport('joomla.application.component.modellist');
  *
  * @package		Joomla.Site
  * @subpackage	com_portfolio
- * @since		1.5
+ * @since		1.0
  */
 class ContentModelCategory extends JModelList
 {
@@ -63,7 +63,7 @@ class ContentModelCategory extends JModelList
 	 *
 	 * @param	array	An optional associative array of configuration settings.
 	 * @see		JController
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function __construct($config = array())
 	{
@@ -99,7 +99,7 @@ class ContentModelCategory extends JModelList
 	 * Note. Calling getState in this method will result in recursion.
 	 *
 	 * return	void
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	protected function populateState($ordering = null, $direction = null)
 	{
@@ -200,7 +200,7 @@ class ContentModelCategory extends JModelList
 	 * Get the articles in the category
 	 *
 	 * @return	mixed	An array of articles or false if an error occurs.
-	 * @since	1.5
+	 * @since	1.0
 	 */
 	function getItems()
 	{
@@ -245,7 +245,7 @@ class ContentModelCategory extends JModelList
 	 * Build the orderby for the query
 	 *
 	 * @return	string	$orderby portion of query
-	 * @since	1.5
+	 * @since	1.0
 	 */
 	protected function _buildContentOrderBy()
 	{
@@ -294,7 +294,7 @@ class ContentModelCategory extends JModelList
 	 * @param	int		An optional ID
 	 *
 	 * @return	object
-	 * @since	1.5
+	 * @since	1.0
 	 */
 	public function getCategory()
 	{
@@ -348,7 +348,7 @@ class ContentModelCategory extends JModelList
 	 * @param	int		An optional category id. If not supplied, the model state 'category.id' will be used.
 	 *
 	 * @return	mixed	An array of categories or false if an error occurs.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	public function getParent()
 	{
@@ -363,7 +363,7 @@ class ContentModelCategory extends JModelList
 	 * Get the left sibling (adjacent) categories.
 	 *
 	 * @return	mixed	An array of categories or false if an error occurs.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	function &getLeftSibling()
 	{
@@ -378,7 +378,7 @@ class ContentModelCategory extends JModelList
 	 * Get the right sibling (adjacent) categories.
 	 *
 	 * @return	mixed	An array of categories or false if an error occurs.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	function &getRightSibling()
 	{
@@ -395,7 +395,7 @@ class ContentModelCategory extends JModelList
 	 * @param	int		An optional category id. If not supplied, the model state 'category.id' will be used.
 	 *
 	 * @return	mixed	An array of categories or false if an error occurs.
-	 * @since	1.6
+	 * @since	1.0
 	 */
 	function &getChildren()
 	{
